@@ -230,6 +230,11 @@ Storing links to files using ~org-store-link~ (=<C-c l>=) when
 description of the link, if available.  If no title exists it falls
 back to the filename as before.
 
+*** New options ~org-icalendar-scheduled-summary-prepend~ and ~org-icalendar-deadline-summary-prepend~
+
+Through these new options for icalendar export, one can customise the
+looks of summary lines in exported events.
+
 * Version 9.4
 ** Incompatible changes
 *** Possibly broken internal file links: please check and fix
