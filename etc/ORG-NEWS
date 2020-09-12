@@ -80,6 +80,11 @@ block. ~org-babel-latex-preamble~, ~org-babel-latex-begin-env~ and
 ~org-babel-latex-end-env~ are new customization options added to allow
 the user to specify the preamble and code that preceedes and proceeds
 the contents of the source block.
+*** New option value for ~org-agenda-show-outline-path~
+
+
+When set to 'title, will show document title in outline path in echo
+area instead of file name.
 
 *** New option ~org-html-meta-tags~ allows for HTML meta tags customization
 
