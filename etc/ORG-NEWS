@@ -242,6 +242,16 @@ back to the filename as before.
 Through these new options for icalendar export, one can customise the
 looks of summary lines in exported events.
 
+*** New option ~org-icalendar-force-alarm~
+
+This is a new setting for icalendar exports to allow users set alarms
+exactly at the event start. With this setting set to non-nil and alarm
+set to zero (by global setting or APPT_WARNTIME property) it will
+create an alarm at the event start.
+
+Note, that zero alarm set as =APPT_WARNTIME= property will override
+default warning time.
+
 * Version 9.4
 ** Incompatible changes
 *** Possibly broken internal file links: please check and fix
