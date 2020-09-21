@@ -158,7 +158,8 @@ When `buffer-name', use the buffer name."
 	  (const :tag "Yes" t)
 	  (const :tag "Start with file name" file)
 	  (const :tag "Start with full file path" full-file-path)
-	  (const :tag "Start with buffer name" buffer-name)))
+	  (const :tag "Start with buffer name" buffer-name)
+	  (const :tag "Start with document title" title)))
 
 (defcustom org-outline-path-complete-in-steps t
   "Non-nil means complete the outline path in hierarchical steps.
@@ -315,6 +316,8 @@ converted to a headline before refiling."
 		 (push (list (buffer-name (buffer-base-buffer)) f nil nil) tgs))
 	       (when (eq org-refile-use-outline-path 'full-file-path)
 		 (push (list (file-truename (buffer-file-name (buffer-base-buffer))) f nil nil) tgs))
+	       (when (eq org-refile-use-outline-path 'title)
+		 (push (list (org-get-title-from-file (file-truename (buffer-file-name (buffer-base-buffer)))) f nil nil) tgs))
 	       (org-with-wide-buffer
 		(goto-char (point-min))
 		(setq org-outline-path-cache nil)

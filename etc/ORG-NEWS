@@ -166,6 +166,14 @@ Example:
 
 A new =u= mode flag for Calc formulas in Org tables has been added to
 enable Calc units simplification mode.
+*** New option value for ~org-agenda-show-outline-path~
+
+When set to 'title, will show document title in outline path in echo
+area instead of file name.
+
+*** New option value for ~org-refile-use-outline-path~
+
+When set to 'title, will show document title in outline path of refile targets.
 
 *** =org-set-tags-command= select tags from ~org-global-tags-completion-table~
 
