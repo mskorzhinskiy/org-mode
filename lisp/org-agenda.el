@@ -2946,7 +2946,7 @@ Pressing `<' twice means to restrict to the current subtree or region
 	          (`agenda
 	           (org-agenda-list current-prefix-arg))
 	          (`agenda*
-	           (org-agenda-list current-prefix-arg nil nil t))
+	           (org-agenda-list current-prefix-arg nil nil nil t))
 	          (`alltodo
 	           (org-todo-list current-prefix-arg))
 	          (`search
@@ -3293,7 +3293,7 @@ s   Search for keywords                 M   Like m, but only TODO entries
 	      (`agenda
 	       (call-interactively 'org-agenda-list))
 	      (`agenda*
-	       (funcall 'org-agenda-list nil nil t))
+	       (funcall 'org-agenda-list nil nil nil t))
 	      (`alltodo
 	       (call-interactively 'org-todo-list))
 	      (`search
