@@ -2939,7 +2939,7 @@ Pressing `<' twice means to restrict to the current subtree or region
 	       ((eq type 'agenda)
 		(org-let lprops '(org-agenda-list current-prefix-arg)))
 	       ((eq type 'agenda*)
-		(org-let lprops '(org-agenda-list current-prefix-arg nil nil t)))
+		(org-let lprops '(org-agenda-list current-prefix-arg nil nil nil t)))
 	       ((eq type 'alltodo)
 		(org-let lprops '(org-todo-list current-prefix-arg)))
 	       ((eq type 'search)
@@ -3271,7 +3271,7 @@ s   Search for keywords                 M   Like m, but only TODO entries
 	    '(call-interactively 'org-agenda-list)))
 	 ((eq type 'agenda*)
 	  (org-let2 gprops lprops
-	    '(funcall 'org-agenda-list nil nil t)))
+	    '(funcall 'org-agenda-list nil nil nil t)))
 	 ((eq type 'alltodo)
 	  (org-let2 gprops lprops
 	    '(call-interactively 'org-todo-list)))
